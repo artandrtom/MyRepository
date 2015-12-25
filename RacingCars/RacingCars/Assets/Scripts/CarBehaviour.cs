@@ -2,21 +2,91 @@
 using System.Collections;
 
 public class CarBehaviour : MonoBehaviour {
-
-    private Texture2D texure;
-    private float velocity = 0.01F;
-
+    public Rigidbody2D body;
+    public movingDirection direction;
+    public float drag;
+    public float angleDrag;
+    public Vector2 position;
+    public  float speed;
     // Use this for initialization
     void Start () {
-      
-	}
+        body = GetComponent<Rigidbody2D>();
+        drag = body.drag;
+        angleDrag = body.angularDrag;
+        position = body.position;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        move();
+        speed = getSpeed();
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            move(Vector2.down, 60);
+            if (speed < 1)
+            {
+                direction = movingDirection.FORWARD;
+            }
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            move(Vector2.up, 35);
+            if (speed < 1)
+            {
+                direction = movingDirection.BACKWARD;
+            }
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            turn(speed%30);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            turn(-speed%30);
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            breaking();
+        }
 	}
-    void move()
+
+    void move(Vector2 dir, int speed)
     {
-        transform.Rotate(0,0,-3);
+        body.drag = drag;
+        body.angularDrag = angleDrag;
+        body.AddRelativeForce(dir * speed, ForceMode2D.Force);
     }
+
+    float getSpeed()
+    {
+        Vector2 newPosition = body.position;
+        float path = Mathf.Sqrt(Mathf.Pow((newPosition.x-position.x),2) + Mathf.Pow((newPosition.y-position.y),2));
+        position = newPosition;
+        return path / Time.deltaTime;
+      
+
+    }
+
+    void turn(float torque)
+    {
+        if (direction == movingDirection.FORWARD)
+        {
+            body.AddTorque(-torque, ForceMode2D.Force);
+        }
+        else if (direction == movingDirection.BACKWARD)
+        {
+            body.AddTorque(torque, ForceMode2D.Force);
+        }
+    }
+    
+    void breaking()
+    {
+        body.drag = 2.2F;
+        //body.angularDrag = 5;
+    }
+}
+public enum movingDirection
+{
+    FORWARD,
+    BACKWARD,
 }
