@@ -50,12 +50,31 @@ public class CarBehaviour : MonoBehaviour {
         }
 	}
 
-    void move(Vector2 dir, int speed)
+    void move(Vector2 dir, float amount)
     {
-        body.drag = drag;
+        body.drag = getDrag();
         body.angularDrag = angleDrag;
-        body.AddRelativeForce(dir * speed, ForceMode2D.Force);
+        body.AddRelativeForce(dir * amount, ForceMode2D.Force);
     }
+
+
+    float getDrag()
+    {
+        float x1 = body.transform.up.x;
+        float y1 = body.transform.up.y;
+        float x2 = body.velocity.x;
+        float y2 = body.velocity.y;
+        float numerator = x1 * x2 + y1 * y2;
+        float denominator = (Mathf.Sqrt(Mathf.Pow(x1, 2) + Mathf.Pow(y1, 2)) * Mathf.Sqrt(Mathf.Pow(x2, 2) + Mathf.Pow(y2, 2)));
+        if ((numerator == 0) || (denominator == 0))
+        {
+            return 0.5F;
+        }
+        float cos = numerator / denominator;
+        float sin = Mathf.Sqrt(1 - Mathf.Pow(cos, 2));
+        return (float)(0.5 + 3 * Mathf.Abs(sin));
+    }
+
 
     float getSpeed()
     {
@@ -63,7 +82,7 @@ public class CarBehaviour : MonoBehaviour {
         float path = Mathf.Sqrt(Mathf.Pow((newPosition.x-position.x),2) + Mathf.Pow((newPosition.y-position.y),2));
         position = newPosition;
         return path / Time.deltaTime;
-      
+        //return body.velocity.magnitude / (Time.fixedDeltaTime*40);
 
     }
 
@@ -73,7 +92,7 @@ public class CarBehaviour : MonoBehaviour {
         {
             body.AddTorque(-torque, ForceMode2D.Force);
         }
-        else if (direction == movingDirection.BACKWARD)
+        else 
         {
             body.AddTorque(torque, ForceMode2D.Force);
         }
