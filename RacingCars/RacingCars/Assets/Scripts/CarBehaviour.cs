@@ -66,7 +66,7 @@ public class CarBehaviour : MonoBehaviour {
         float y2 = body.velocity.y;
         float numerator = x1 * x2 + y1 * y2;
         float denominator = (Mathf.Sqrt(Mathf.Pow(x1, 2) + Mathf.Pow(y1, 2)) * Mathf.Sqrt(Mathf.Pow(x2, 2) + Mathf.Pow(y2, 2)));
-        if ((numerator == 0) || (denominator == 0))
+        if (denominator == 0)
         {
             return 0.5F;
         }
