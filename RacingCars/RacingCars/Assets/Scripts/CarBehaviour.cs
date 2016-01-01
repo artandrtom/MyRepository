@@ -8,6 +8,7 @@ public class CarBehaviour : MonoBehaviour {
     public float angleDrag;
     public Vector2 position;
     public  float speed;
+    public string nickname;
     // Use this for initialization
     void Start () {
         body = GetComponent<Rigidbody2D>();
