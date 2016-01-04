@@ -7,10 +7,13 @@ public class MyClient : MonoBehaviour {
 
     void Start () {
         client = new LoadBalancingClient();
-        client.AppId = "585750c5 - 0d7d - 4424 - b660 - 6239998a33a9";  // edit this!
+        client.AppId = "585750c5 - 0d7d - 4424 - b660 - 6239998a33a9";
 
         // "eu" is the European region's token
         bool connectInProcess = client.ConnectToRegionMaster("eu");
+        MyCreateRoom("roomTest", 4);
+        client.AutoJoinLobby = true;
+       
     }
 
     void Update()
@@ -26,8 +29,5 @@ public class MyClient : MonoBehaviour {
     {
         client.OpCreateRoom(roomName, new RoomOptions() { MaxPlayers = maxPlayers }, TypedLobby.Default);
     }
-    private void OnMouseDown()
-    {
-        MyCreateRoom("Test Room",2);
-    }
+   
 }
