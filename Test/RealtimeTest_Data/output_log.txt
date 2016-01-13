@@ -1,0 +1,98 @@
+Initialize engine version: 5.3.0f4 (2524e04062b4)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [aticfx32.dll 8.17.10.1429]
+    Renderer: AMD Radeon HD 7800 Series
+    Vendor:   ATI
+    VRAM:     2027 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 INTZ=1 NULL=1 RESZ=1 SlowINTZ=1
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Repository\Test\RealtimeTest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Repository\Test\RealtimeTest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Repository\Test\RealtimeTest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Repository\Test\RealtimeTest_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading F:\Repository\Test\RealtimeTest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.072 seconds
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Repository\Test\RealtimeTest_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 1.037993 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 102c -> priority: 1 
+Not able to set a push-message-tag because the system doesn't support it. Skipping that.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setting UserId sent by Server:da677363-e6d5-4260-b9a2-298c84b4bb2d
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MemoryBoard.OnVisibleChanged. now visible: False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Board Properties: {(String)13=(Byte)8, (String)14=(Byte)9, (String)pt=(Int32)0, (String)ty#=(Int32)4, (String)20=(Byte)4, (String)10=(Byte)11, (String)15=(Byte)1, (String)pt1=(Byte)0, (String)18=(Byte)9, (String)t#=(Int32)1, (String)19=(Byte)2, (String)8=(Byte)5, (String)9=(Byte)3, (String)11=(Byte)3, (String)2=(Byte)12, (String)3=(Byte)1, (String)0=(Byte)6, (String)1=(Byte)11, (String)6=(Byte)6, (String)7=(Byte)10, (String)4=(Byte)10, (String)5=(Byte)12, (String)23=(Byte)5, (String)22=(Byte)7, (String)12=(Byte)7, (String)17=(Byte)2, (String)tx#=(Int32)6, (String)16=(Byte)8, (String)21=(Byte)4}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Saving names.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Board Properties: {(String)13=(Byte)8, (String)14=(Byte)9, (String)pt=(Int32)0, (String)ty#=(Int32)4, (String)20=(Byte)4, (String)10=(Byte)11, (String)15=(Byte)1, (String)pt1=(Byte)0, (String)18=(Byte)9, (String)t#=(Int32)1, (String)19=(Byte)2, (String)8=(Byte)5, (String)9=(Byte)3, (String)11=(Byte)3, (String)2=(Byte)12, (String)3=(Byte)1, (String)0=(Byte)6, (String)1=(Byte)11, (String)6=(Byte)6, (String)7=(Byte)10, (String)4=(Byte)10, (String)5=(Byte)12, (String)23=(Byte)5, (String)22=(Byte)7, (String)12=(Byte)7, (String)17=(Byte)2, (String)tx#=(Int32)6, (String)16=(Byte)8, (String)21=(Byte)4, (String)names=(String)Chmo;}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Board Properties: {(String)13=(Byte)8, (String)14=(Byte)9, (String)pt=(Int32)0, (String)ty#=(Int32)4, (String)20=(Byte)4, (String)10=(Byte)11, (String)15=(Byte)1, (String)pt1=(Byte)0, (String)18=(Byte)9, (String)t#=(Int32)1, (String)19=(Byte)2, (String)8=(Byte)5, (String)9=(Byte)3, (String)11=(Byte)3, (String)2=(Byte)12, (String)3=(Byte)1, (String)0=(Byte)6, (String)1=(Byte)11, (String)6=(Byte)6, (String)7=(Byte)10, (String)4=(Byte)10, (String)5=(Byte)12, (String)23=(Byte)5, (String)22=(Byte)7, (String)12=(Byte)7, (String)17=(Byte)2, (String)tx#=(Int32)6, (String)16=(Byte)8, (String)21=(Byte)4, (String)names=(String)Chmo;}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Board Properties: {(String)13=(Byte)8, (String)14=(Byte)9, (String)pt=(Int32)0, (String)ty#=(Int32)4, (String)20=(Byte)4, (String)10=(Byte)11, (String)15=(Byte)1, (String)pt1=(Byte)0, (String)18=(Byte)9, (String)t#=(Int32)1, (String)19=(Byte)2, (String)8=(Byte)5, (String)9=(Byte)3, (String)11=(Byte)3, (String)2=(Byte)12, (String)3=(Byte)1, (String)0=(Byte)6, (String)1=(Byte)11, (String)6=(Byte)6, (String)7=(Byte)10, (String)4=(Byte)10, (String)5=(Byte)12, (String)23=(Byte)5, (String)22=(Byte)7, (String)12=(Byte)7, (String)17=(Byte)2, (String)tx#=(Int32)6, (String)16=(Byte)8, (String)21=(Byte)4, (String)names=(String)Pidor;}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MemoryBoard.OnVisibleChanged. now visible: True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Board Properties: {(String)13=(Byte)8, (String)14=(Byte)9, (String)pt=(Int32)1, (String)ty#=(Int32)4, (String)20=(Byte)4, (String)10=(Byte)11, (String)15=(Byte)1, (String)pt1=(Byte)0, (String)18=(Byte)9, (String)t#=(Int32)1, (String)19=(Byte)2, (String)8=(Byte)5, (String)9=(Byte)3, (String)11=(Byte)3, (String)2=(Byte)12, (String)3=(Byte)1, (String)0=(Byte)6, (String)1=(Byte)11, (String)6=(Byte)6, (String)7=(Byte)10, (String)4=(Byte)10, (String)5=(Byte)12, (String)23=(Byte)5, (String)22=(Byte)7, (String)12=(Byte)7, (String)17=(Byte)2, (String)tx#=(Int32)6, (String)16=(Byte)8, (String)21=(Byte)4, (String)names=(String)Pidor;, (String)flips=(Byte[])System.Byte[]}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Board Properties: {(String)13=(Byte)8, (String)14=(Byte)9, (String)pt=(Int32)1, (String)ty#=(Int32)4, (String)20=(Byte)4, (String)10=(Byte)11, (String)15=(Byte)1, (String)pt1=(Byte)0, (String)18=(Byte)9, (String)t#=(Int32)1, (String)19=(Byte)2, (String)8=(Byte)5, (String)9=(Byte)3, (String)11=(Byte)3, (String)2=(Byte)12, (String)3=(Byte)1, (String)0=(Byte)6, (String)1=(Byte)11, (String)6=(Byte)6, (String)7=(Byte)10, (String)4=(Byte)10, (String)5=(Byte)12, (String)23=(Byte)5, (String)22=(Byte)7, (String)12=(Byte)7, (String)17=(Byte)2, (String)tx#=(Int32)6, (String)16=(Byte)8, (String)21=(Byte)4, (String)names=(String)Pidor;, (String)flips=(Byte[])System.Byte[], (String)turn=(Int32)2}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+EndTurn. Flipped Tiles: 8, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Nope. Those are not the same. Handing over turn. Ending turn for player: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MemoryBoard.OnVisibleChanged. now visible: False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Could not find Cube in Tiles.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+IndexOutOfRangeException: Array index is out of range.
+  at MemoryBoard.OnClick () [0x00000] in <filename unknown>:0 
+UnityEngine.GameObject:SendMessageUpwards(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessageUpwards(String, SendMessageOptions)
+InputToEvent:Release(Vector2)
+InputToEvent:Update()
+ 
+(Filename:  Line: -1)
+

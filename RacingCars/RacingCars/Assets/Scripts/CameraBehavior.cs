@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class CameraBehavior : MonoBehaviour {
-    public Transform target;
-    float time;
+public class CameraBehavior : NetworkBehaviour {
+    public Rigidbody2D body;
+    //public Transform target;
+
+    void Start()
+    {
+        body = GetComponentInParent<Rigidbody2D>();
+    }
     void Update()
     {
-        transform.position = new Vector3(target.position.x, target.position.y+6,-10);
-        time = Time.timeSinceLevelLoad;
-        
+        if (isLocalPlayer)
+        {
+            return;
+        }
+        transform.position = new Vector3(body.position.x, body.position.y+6,-10);     
     }
-    void OnGUI()
-    {
-        GUI.Box(new Rect(10, 10, 140, 30), time.ToString());
-    }
+
 }

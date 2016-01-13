@@ -1,24 +1,31 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class CarBehaviour : MonoBehaviour {
+public class CarBehaviour : NetworkBehaviour {
     public Rigidbody2D body;
     public movingDirection direction;
-    public float drag;
-    public float angleDrag;
+    float drag;
+    float angleDrag;
     public Vector2 position;
     public  float speed;
-    public string nickname;
+    public Camera cam;
     // Use this for initialization
     void Start () {
         body = GetComponent<Rigidbody2D>();
         drag = body.drag;
         angleDrag = body.angularDrag;
         position = body.position;
+        body.MoveRotation(180);
+        cam = GetComponentInChildren<Camera>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         speed = getSpeed();
 
         if (Input.GetKey(KeyCode.W))
@@ -58,7 +65,6 @@ public class CarBehaviour : MonoBehaviour {
         body.AddRelativeForce(dir * amount, ForceMode2D.Force);
     }
 
-
     float getDrag()
     {
         float x1 = body.transform.up.x;
@@ -73,7 +79,7 @@ public class CarBehaviour : MonoBehaviour {
         }
         float cos = numerator / denominator;
         float sin = Mathf.Sqrt(1 - Mathf.Pow(cos, 2));
-        return (float)(0.5 + 3 * Mathf.Abs(sin));
+        return double.IsNaN(0.5 + 3 * Mathf.Abs(sin)) ? 0 : (float)(0.5 + 3 * Mathf.Abs(sin));
     }
 
 
