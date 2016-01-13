@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.Networking;
 using System.Collections;
 
-public class CarBehaviour : NetworkBehaviour {
+public class CarBehaviour : MonoBehaviour {
     public Rigidbody2D body;
     public movingDirection direction;
     float drag;
     float angleDrag;
     public Vector2 position;
     public  float speed;
-    public Camera cam;
+
     // Use this for initialization
     void Start () {
         body = GetComponent<Rigidbody2D>();
@@ -17,15 +16,10 @@ public class CarBehaviour : NetworkBehaviour {
         angleDrag = body.angularDrag;
         position = body.position;
         body.MoveRotation(180);
-        cam = GetComponentInChildren<Camera>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
         speed = getSpeed();
 
         if (Input.GetKey(KeyCode.W))
