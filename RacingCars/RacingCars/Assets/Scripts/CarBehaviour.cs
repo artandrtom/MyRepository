@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using ExitGames.Client.Photon.LoadBalancing;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
+using Random = UnityEngine.Random;
 
 public class CarBehaviour : MonoBehaviour {
     public Rigidbody2D body;

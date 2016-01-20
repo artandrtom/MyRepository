@@ -2,9 +2,9 @@ Mono path[0] = 'F:/Repository/Test/Test_Data/Managed'
 Mono path[1] = 'F:/Repository/Test/Test_Data/Mono'
 Mono config path = 'F:/Repository/Test/Test_Data/Mono/etc'
 PlayerConnection initialized from F:/Repository/Test/Test_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55138
-Multi-casting "[IP] 192.168.0.10 [Port] 55138 [Flags] 2 [Guid] 754352366 [EditorId] 3708439196 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.0.10:55138]
+PlayerConnection initialized network socket : 0.0.0.0 55427
+Multi-casting "[IP] 192.168.0.11 [Port] 55427 [Flags] 2 [Guid] 1822425456 [EditorId] 516718735 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.11:55427]
 Initialize engine version: 5.3.0f4 (2524e04062b4)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,158 +23,22 @@ Platform assembly: F:\Repository\Test\Test_Data\Managed\UnityEngine.Networking.d
 Loading F:\Repository\Test\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: F:\Repository\Test\Test_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading F:\Repository\Test\Test_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.061 seconds
+- Completed reload, in  0.063 seconds
 Platform assembly: F:\Repository\Test\Test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\Repository\Test\Test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.511989 ms
+UnloadTime: 1.116942 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 290c -> priority: 1 
-Setting UserId sent by Server:be84274d-84b7-41ee-a185-40167b6dd0bf
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
+  Thread -> id: 23b8 -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.416569 ms
+System memory in use before: 19.5 MB.
+System memory in use after: 19.5 MB.
 
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 202.
+Total: 0.281054 ms (FindLiveObjects: 0.028294 ms CreateObjectMapping: 0.022635 ms MarkObjects: 0.211531 ms  DeleteObjects: 0.007275 ms)
 
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
-1
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:38)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 38)
-
-False
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-MyClient:OnGUI() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyClient.cs:39)
- 
-(Filename: F:/Repository/RacingCars/RacingCars/Assets/Scripts/MyClient.cs Line: 39)
-
+Setting UserId sent by Server:48dad3d0-4388-44b1-80c9-fbfb603ec9db
