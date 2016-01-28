@@ -2,9 +2,9 @@ Mono path[0] = 'F:/Repository/Test/Test_Data/Managed'
 Mono path[1] = 'F:/Repository/Test/Test_Data/Mono'
 Mono config path = 'F:/Repository/Test/Test_Data/Mono/etc'
 PlayerConnection initialized from F:/Repository/Test/Test_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55216
-Multi-casting "[IP] 192.168.0.11 [Port] 55216 [Flags] 2 [Guid] 119297994 [EditorId] 3443737437 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.0.11:55216]
+PlayerConnection initialized network socket : 0.0.0.0 55139
+Multi-casting "[IP] 192.168.0.10 [Port] 55139 [Flags] 2 [Guid] 3800534635 [EditorId] 4120619749 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.10:55139]
 Initialize engine version: 5.3.1f1 (cc9cbbcc37b4)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -15,6 +15,8 @@ Direct3D:
 Begin MonoManager ReloadAssembly
 Platform assembly: F:\Repository\Test\Test_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading F:\Repository\Test\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\Test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Repository\Test\Test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
 Platform assembly: F:\Repository\Test\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading F:\Repository\Test\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: F:\Repository\Test\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
@@ -30,23 +32,22 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.324956 ms
+UnloadTime: 1.290199 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.100727 ms
-System memory in use before: 19.1 MB.
-System memory in use after: 19.1 MB.
+UnloadTime: 2.568273 ms
+System memory in use before: 19.4 MB.
+System memory in use after: 19.5 MB.
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 204.
-Total: 0.205870 ms (FindLiveObjects: 0.023712 ms CreateObjectMapping: 0.019131 ms MarkObjects: 0.154942 ms  DeleteObjects: 0.007275 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 0.270812 ms (FindLiveObjects: 0.037186 ms CreateObjectMapping: 0.024251 ms MarkObjects: 0.200212 ms  DeleteObjects: 0.008353 ms)
 
-Setting UserId sent by Server:2d16d2dd-cdc8-426c-ac91-c9624f215328
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.638361 ms
-System memory in use before: 19.1 MB.
-System memory in use after: 19.1 MB.
+UnloadTime: 0.348957 ms
+System memory in use before: 20.8 MB.
+System memory in use after: 20.9 MB.
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 209.
-Total: 0.410933 ms (FindLiveObjects: 0.028832 ms CreateObjectMapping: 0.017245 ms MarkObjects: 0.352459 ms  DeleteObjects: 0.011048 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1776.
+Total: 0.575577 ms (FindLiveObjects: 0.105630 ms CreateObjectMapping: 0.032874 ms MarkObjects: 0.419826 ms  DeleteObjects: 0.016706 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1e7c -> priority: 1 
+  Thread -> id: 2d70 -> priority: 1 
