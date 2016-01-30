@@ -11,6 +11,7 @@ public class MyGUI : MonoBehaviour
     private bool isReady = false;
     private float posX = -19;
     private PhotonView myPhotonView;
+    private Timer timer;
     void Start()
     {
         Application.runInBackground = true;
@@ -18,7 +19,11 @@ public class MyGUI : MonoBehaviour
         PhotonNetwork.ConnectUsingSettings("0.1");
         properties = new Hashtable();
         properties["ready"] = this.isReady;
+        properties["finish"] = false;
+        PhotonNetwork.player.SetCustomProperties(properties);
         myPhotonView = this.GetComponent<PhotonView>();
+        timer = this.GetComponent<Timer>();
+        timer.enabled = false;
     }
 
     void OnGUI()
@@ -39,6 +44,12 @@ public class MyGUI : MonoBehaviour
         }
     }
 
+    private void OnGUITimer()
+    {
+        float time = Time.timeSinceLevelLoad;
+        GUI.Box(new Rect(10, 10, 140, 30), string.Format("{0:0} min {1:00} sec", (int)(time / 60), (int)((time - (int)(time / 60) * 60))));
+    }
+
     [PunRPC]
     void loadLevel()
     {
@@ -46,7 +57,27 @@ public class MyGUI : MonoBehaviour
         GameObject car = PhotonNetwork.Instantiate("Car", new Vector3((float)PhotonNetwork.player.customProperties["posX"], -5, 0), Quaternion.identity, 0);
         GameObject camera = Instantiate(Resources.Load("Camera"), Vector3.zero, Quaternion.identity) as GameObject;
         camera.AddComponent<CameraBehavior>();
+        PhotonNetwork.player.TagObject = car;
+        timer.enabled = true;
     }
+   
+    [PunRPC]
+    void finish()
+    {
+        foreach (PhotonPlayer player in PhotonNetwork.playerList)
+        {
+            if ((bool)player.customProperties["finish"] == false)
+            {
+                return;
+            }
+        }
+
+        foreach (PhotonPlayer player in PhotonNetwork.playerList)
+        {
+            print(player.name + " finished in: " + player.customProperties["time"]);
+        }        
+    }
+    
     private void OnGUILobby()
     {
         GUILayout.Label("Lobby Screen");
@@ -115,16 +146,11 @@ public class MyGUI : MonoBehaviour
                     properties = new Hashtable();
                     properties["posX"] = this.posX;
                     player.SetCustomProperties(properties);
-                    Debug.Log(player.name + " " + (float)player.customProperties["posX"]);
                     this.posX += 2.5F;
                 }
                 this.myPhotonView.RPC("loadLevel", PhotonTargets.All);
             }
         }
         
-    }
-    void OnApplicationQuit()
-    {
-        PhotonNetwork.Disconnect();
     }
 }

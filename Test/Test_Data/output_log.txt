@@ -2,9 +2,9 @@ Mono path[0] = 'F:/Repository/Test/Test_Data/Managed'
 Mono path[1] = 'F:/Repository/Test/Test_Data/Mono'
 Mono config path = 'F:/Repository/Test/Test_Data/Mono/etc'
 PlayerConnection initialized from F:/Repository/Test/Test_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55139
-Multi-casting "[IP] 192.168.0.10 [Port] 55139 [Flags] 2 [Guid] 3800534635 [EditorId] 4120619749 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.0.10:55139]
+PlayerConnection initialized network socket : 0.0.0.0 55434
+Multi-casting "[IP] 192.168.0.13 [Port] 55434 [Flags] 2 [Guid] 2530608011 [EditorId] 678790206 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.13:55434]
 Initialize engine version: 5.3.1f1 (cc9cbbcc37b4)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -25,29 +25,67 @@ Platform assembly: F:\Repository\Test\Test_Data\Managed\UnityEngine.Networking.d
 Loading F:\Repository\Test\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: F:\Repository\Test\Test_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading F:\Repository\Test\Test_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.066 seconds
+- Completed reload, in  0.069 seconds
 Platform assembly: F:\Repository\Test\Test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\Repository\Test\Test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.290199 ms
+UnloadTime: 1.309621 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.568273 ms
+UnloadTime: 2.716251 ms
 System memory in use before: 19.4 MB.
-System memory in use after: 19.5 MB.
+System memory in use after: 19.4 MB.
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 310.
-Total: 0.270812 ms (FindLiveObjects: 0.037186 ms CreateObjectMapping: 0.024251 ms MarkObjects: 0.200212 ms  DeleteObjects: 0.008353 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 318.
+Total: 0.229587 ms (FindLiveObjects: 0.025330 ms CreateObjectMapping: 0.017515 ms MarkObjects: 0.180544 ms  DeleteObjects: 0.005389 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.348957 ms
-System memory in use before: 20.8 MB.
-System memory in use after: 20.9 MB.
+UnloadTime: 0.331716 ms
+System memory in use before: 22.1 MB.
+System memory in use after: 22.2 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1776.
-Total: 0.575577 ms (FindLiveObjects: 0.105630 ms CreateObjectMapping: 0.032874 ms MarkObjects: 0.419826 ms  DeleteObjects: 0.016706 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1785.
+Total: 0.559957 ms (FindLiveObjects: 0.107787 ms CreateObjectMapping: 0.030180 ms MarkObjects: 0.403395 ms  DeleteObjects: 0.017515 ms)
+
+RaZ finished in: 11.87014
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:106)
+MyGUI:finish() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyGUI.cs:77)
+System.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)
+System.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)
+System.Reflection.MethodBase:Invoke(Object, Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MethodBase.cs:115)
+NetworkingPeer:ExecuteRpc(Object[], PhotonPlayer) (at F:\Repository\RacingCars\RacingCars\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2274)
+NetworkingPeer:OnEvent(EventData) (at F:\Repository\RacingCars\RacingCars\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1946)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at F:\Repository\RacingCars\RacingCars\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
+ 
+(Filename: /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs Line: 222)
+
+NickName finished in: 4.486015
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:106)
+MyGUI:finish() (at F:\Repository\RacingCars\RacingCars\Assets\Scripts\MyGUI.cs:77)
+System.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)
+System.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)
+System.Reflection.MethodBase:Invoke(Object, Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MethodBase.cs:115)
+NetworkingPeer:ExecuteRpc(Object[], PhotonPlayer) (at F:\Repository\RacingCars\RacingCars\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2274)
+NetworkingPeer:OnEvent(EventData) (at F:\Repository\RacingCars\RacingCars\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1946)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at F:\Repository\RacingCars\RacingCars\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:125)
+ 
+(Filename: /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs Line: 222)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2d70 -> priority: 1 
+  Thread -> id: 1ae0 -> priority: 1 

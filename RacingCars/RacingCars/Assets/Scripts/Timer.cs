@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Timer : MonoBehaviour {
-    float time;
+    private float time;
 	void Update () {
         time = Time.timeSinceLevelLoad;
 	}

@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
 using Photon;
 using System.Collections;
-/*
-using ExitGames.Client.Photon.LoadBalancing;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
-using Random = UnityEngine.Random;
-*/
+
 
 public class CarBehaviour : Photon.MonoBehaviour {
     private Rigidbody2D body;
@@ -14,13 +11,18 @@ public class CarBehaviour : Photon.MonoBehaviour {
     private float angleDrag;
     private Vector3 position;
     private  float speed;
+    private PhotonView myPhotonView;
+    private bool controlable = true;
+    private Hashtable properties;
     void Start () {
+        properties = new Hashtable();
         GameObject.DontDestroyOnLoad(this.gameObject);
         body = GetComponent<Rigidbody2D>();
         drag = body.drag;
         angleDrag = body.angularDrag;
         position = body.position;
         body.MoveRotation(180);
+        myPhotonView = this.GetComponent<PhotonView>();
     }
 	
 	// Update is called once per frame
@@ -34,6 +36,10 @@ public class CarBehaviour : Photon.MonoBehaviour {
     void fixedUpdate()
     {
             speed = getSpeed();
+        if (!controlable)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.W))
         {
             move(Vector3.down, 60);
@@ -61,6 +67,29 @@ public class CarBehaviour : Photon.MonoBehaviour {
         if (Input.GetKey(KeyCode.Space))
         {
             breaking();
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!photonView.isMine)
+        {
+            return;
+        }
+        if (other.name.Equals("Finish"))
+        {
+            controlable = false;
+            //string name = PhotonNetwork.player.name;
+            string time = Time.timeSinceLevelLoad.ToString();
+            //PhotonView guiView = GameObject.Find("LobbyManager").GetComponent<PhotonView>();
+            //guiView.RPC("finish", PhotonTargets.MasterClient, PhotonNetwork.playerName, time);  
+            Hashtable properties = new Hashtable();
+            properties["time"] = time;
+            properties["finish"] = true;
+            PhotonNetwork.player.SetCustomProperties(properties);
+            //print(name + " finished in " + PhotonNetwork.player.customProperties["time"] + " seconds");
+            PhotonView guiView = GameObject.Find("LobbyManager").GetComponent<PhotonView>();
+            guiView.RPC("finish", PhotonTargets.All);  
+
         }
     }
 

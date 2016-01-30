@@ -38,4 +38,5 @@ MonoBehaviour:
   - TaggedPlayer
   - loadLevel
   - appearAll
+  - finish
   DisableAutoOpenWizard: 1
