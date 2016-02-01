@@ -78,15 +78,11 @@ public class CarBehaviour : Photon.MonoBehaviour {
         if (other.name.Equals("Finish"))
         {
             controlable = false;
-            //string name = PhotonNetwork.player.name;
-            string time = Time.timeSinceLevelLoad.ToString();
-            //PhotonView guiView = GameObject.Find("LobbyManager").GetComponent<PhotonView>();
-            //guiView.RPC("finish", PhotonTargets.MasterClient, PhotonNetwork.playerName, time);  
+            float time = Time.timeSinceLevelLoad;
             Hashtable properties = new Hashtable();
             properties["time"] = time;
             properties["finish"] = true;
             PhotonNetwork.player.SetCustomProperties(properties);
-            //print(name + " finished in " + PhotonNetwork.player.customProperties["time"] + " seconds");
             PhotonView guiView = GameObject.Find("LobbyManager").GetComponent<PhotonView>();
             guiView.RPC("finish", PhotonTargets.All);  
 

@@ -182,6 +182,7 @@ GameObject:
   - 114: {fileID: 1054154750}
   - 114: {fileID: 1054154751}
   - 114: {fileID: 1054154752}
+  - 114: {fileID: 1054154753}
   m_Layer: 0
   m_Name: LobbyManager
   m_TagString: Untagged
@@ -212,6 +213,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab12169dd6d8ac54f84ce98698e7d381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windowRect:
+    serializedVersion: 2
+    x: -120
+    y: -300
+    width: 240
+    height: 600
 --- !u!114 &1054154751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +255,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1547858206b0f944f8749351d065cb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1054154753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1054154748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e10c35864caf646981a5bd9d9cb10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayFabId: 
 --- !u!1 &1081825006
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,18 +291,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1081825006}
-  m_Text: 'Racing Cars v1.02
-
-    Create or join room
-
-    then press "Ready to play".
-
-    Master must start a game.
-
-    Control car with WASD.
-
-
-'
+  m_Text: "Retarded Games presents:\nRacing Cars v1.02\nCreate or join room\nthen
+    press \"Ready to play\".\nMaster must start a game.\nControl car with WASD \nand
+    try to came first."
   m_OffsetZ: 0
   m_CharacterSize: 0.5
   m_LineSpacing: 1

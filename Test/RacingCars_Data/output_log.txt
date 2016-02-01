@@ -1,0 +1,91 @@
+Mono path[0] = 'F:/Repository/Test/RacingCars_Data/Managed'
+Mono path[1] = 'F:/Repository/Test/RacingCars_Data/Mono'
+Mono config path = 'F:/Repository/Test/RacingCars_Data/Mono/etc'
+PlayerConnection initialized from F:/Repository/Test/RacingCars_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55502
+Multi-casting "[IP] 192.168.0.11 [Port] 55502 [Flags] 2 [Guid] 3331557016 [EditorId] 2845072049 [Version] 1048832 [Id] WindowsPlayer(RA3_PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.0.11:55502]
+Initialize engine version: 5.3.1f1 (cc9cbbcc37b4)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7800 Series (ID=0x6819)
+    Vendor:   ATI
+    VRAM:     2027 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Repository\Test\RacingCars_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Repository\Test\RacingCars_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Repository\Test\RacingCars_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Repository\Test\RacingCars_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Repository\Test\RacingCars_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading F:\Repository\Test\RacingCars_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.067 seconds
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Repository\Test\RacingCars_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.282917 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.674158 ms
+System memory in use before: 19.5 MB.
+System memory in use after: 19.5 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 588.
+Total: 0.315272 ms (FindLiveObjects: 0.050120 ms CreateObjectMapping: 0.031796 ms MarkObjects: 0.225541 ms  DeleteObjects: 0.006736 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.338985 ms
+System memory in use before: 20.2 MB.
+System memory in use after: 20.2 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 598.
+Total: 0.425213 ms (FindLiveObjects: 0.034221 ms CreateObjectMapping: 0.020748 ms MarkObjects: 0.363776 ms  DeleteObjects: 0.005658 ms)
+
+Got PlayFabID: C1032EB2726518CE
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlayFabManager:<Login>m__C3(LoginResult) (at F:\NewRepository\RacingCars\RacingCars\Assets\Scripts\PlayFabManager.cs:32)
+System.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)
+System.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)
+System.Reflection.MethodBase:Invoke(Object, Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MethodBase.cs:115)
+System.Delegate:DynamicInvokeImpl(Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System/Delegate.cs:443)
+System.MulticastDelegate:DynamicInvokeImpl(Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System/MulticastDelegate.cs:71)
+System.Delegate:DynamicInvoke(Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System/Delegate.cs:415)
+PlayFab.Internal.ResultContainer`1:HandleResults(CallRequestContainer, Delegate, ErrorCallback, Action`2) (at F:\NewRepository\RacingCars\RacingCars\Assets\PlayFabSDK\Internal\ResultContainer.cs:55)
+PlayFab.<LoginWithCustomID>c__AnonStorey32:<>m__52(CallRequestContainer) (at F:\NewRepository\RacingCars\RacingCars\Assets\PlayFabSDK\Public\PlayFabClientAPI.cs:179)
+PlayFab.CallRequestContainer:InvokeCallback() (at F:\NewRepository\RacingCars\RacingCars\Assets\Plugins\PlayFabErrors.cs:248)
+PlayFab.Internal.<MakeRequestViaUnity>c__Iterator3:MoveNext() (at F:\NewRepository\RacingCars\RacingCars\Assets\PlayFabSDK\Internal\PlayFabHTTP.cs:252)
+ 
+(Filename: /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs Line: 222)
+
+(existing account)
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlayFabManager:<Login>m__C3(LoginResult) (at F:\NewRepository\RacingCars\RacingCars\Assets\Scripts\PlayFabManager.cs:40)
+System.Reflection.MonoMethod:InternalInvoke(Object, Object[], Exception&)
+System.Reflection.MonoMethod:Invoke(Object, BindingFlags, Binder, Object[], CultureInfo) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222)
+System.Reflection.MethodBase:Invoke(Object, Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MethodBase.cs:115)
+System.Delegate:DynamicInvokeImpl(Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System/Delegate.cs:443)
+System.MulticastDelegate:DynamicInvokeImpl(Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System/MulticastDelegate.cs:71)
+System.Delegate:DynamicInvoke(Object[]) (at /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System/Delegate.cs:415)
+PlayFab.Internal.ResultContainer`1:HandleResults(CallRequestContainer, Delegate, ErrorCallback, Action`2) (at F:\NewRepository\RacingCars\RacingCars\Assets\PlayFabSDK\Internal\ResultContainer.cs:55)
+PlayFab.<LoginWithCustomID>c__AnonStorey32:<>m__52(CallRequestContainer) (at F:\NewRepository\RacingCars\RacingCars\Assets\PlayFabSDK\Public\PlayFabClientAPI.cs:179)
+PlayFab.CallRequestContainer:InvokeCallback() (at F:\NewRepository\RacingCars\RacingCars\Assets\Plugins\PlayFabErrors.cs:248)
+PlayFab.Internal.<MakeRequestViaUnity>c__Iterator3:MoveNext() (at F:\NewRepository\RacingCars\RacingCars\Assets\PlayFabSDK\Internal\PlayFabHTTP.cs:252)
+ 
+(Filename: /Users/builduser/buildslave/mono-runtime-and-classlibs/build/mcs/class/corlib/System.Reflection/MonoMethod.cs Line: 222)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 214c -> priority: 1 

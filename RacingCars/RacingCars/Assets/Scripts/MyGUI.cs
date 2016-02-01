@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using ExitGames.Client.Photon;
+using System.Collections.Generic;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class MyGUI : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class MyGUI : MonoBehaviour
     private float posX = -19;
     private PhotonView myPhotonView;
     private Timer timer;
+    private bool showboard = false;
+    public Rect windowRect = new Rect(Screen.width-120, Screen.height-300, 240, 600);
+    private List<string> table;
+    private PlayFabManager myManager;
+    private string bestPlayer="";
+    private float bestValue;
+    private int position = 0;
     void Start()
     {
         Application.runInBackground = true;
@@ -24,13 +32,20 @@ public class MyGUI : MonoBehaviour
         myPhotonView = this.GetComponent<PhotonView>();
         timer = this.GetComponent<Timer>();
         timer.enabled = false;
+        myManager = GetComponent<PlayFabManager>();
     }
 
     void OnGUI()
     {
         if (SceneManager.GetActiveScene().name.Equals("mainScene"))
         {
+            if (!showboard)
+            {
+                return;
+            }
+            OnGUIBoard();
             return;
+           
         }
         GUILayout.Label(PhotonNetwork.connectionStateDetailed.ToString());
         switch (PhotonNetwork.connectionStateDetailed)
@@ -44,6 +59,33 @@ public class MyGUI : MonoBehaviour
         }
     }
 
+    private void OnGUIBoard()
+    {
+        windowRect = GUI.Window(0, new Rect(Screen.width/2 - 120, Screen.height/2 - 180, 240, 400), DoMyWindow, "Leaderboards");
+    }
+    void DoMyWindow(int windowID)
+    {
+        GUILayout.Label(bestPlayer+" wins by finishing in "+bestValue+" secends");
+        GUILayout.Label("TOP 10 players:");
+        for (int i=0; i<table.Count && i<10; i++)
+        {
+            GUILayout.Label((i+1)+") "+table.ToArray()[i].ToString()+" sec");         
+        }
+        GUILayout.Label(" Your place all time leaderboard: "+position.ToString());
+        if (GUILayout.Button("Show and refresh Leaderboard"))
+        {
+            table = new List<string>(myManager.getStats());
+            position = myManager.getPosition((float)(PhotonNetwork.player.customProperties["time"]));
+        }
+        if (GUILayout.Button("Return to Lobby"))
+        {
+            Destroy(GameObject.Find("Camera(Clone)"));
+            Destroy(GameObject.Find("Car(Clone)"));
+            PhotonNetwork.Disconnect();
+            Destroy(gameObject);
+            SceneManager.LoadScene("Lobby");
+        }
+    }
     private void OnGUITimer()
     {
         float time = Time.timeSinceLevelLoad;
@@ -71,11 +113,27 @@ public class MyGUI : MonoBehaviour
                 return;
             }
         }
-
+        timer.enabled = false;
+        if (PhotonNetwork.isMasterClient)
+        {
+            foreach (PhotonPlayer player in PhotonNetwork.playerList)
+            {           
+                myManager.SetUserData(player.name, (float)player.customProperties["time"]);               
+            }
+        }
+        bestValue = (float)PhotonNetwork.player.customProperties["time"];
+        bestPlayer = PhotonNetwork.player.name.ToString();
         foreach (PhotonPlayer player in PhotonNetwork.playerList)
         {
-            print(player.name + " finished in: " + player.customProperties["time"]);
-        }        
+            print((float)(player.customProperties["time"]));
+            if((float)(player.customProperties["time"]) < bestValue)
+            {
+                bestValue = (float)(player.customProperties["time"]);
+                bestPlayer = player.name.ToString();
+            }
+        }
+        table = myManager.getStats();
+        showboard = true;
     }
     
     private void OnGUILobby()

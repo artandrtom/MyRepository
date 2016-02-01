@@ -14,6 +14,7 @@ public class CameraBehavior : Photon.MonoBehaviour {
     }
     void Update()
     {
+        if(car!=null)
         transform.position = new Vector3(car.transform.position.x, car.transform.position.y, -40);
     }
 
