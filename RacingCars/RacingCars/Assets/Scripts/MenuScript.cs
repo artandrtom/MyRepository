@@ -2,27 +2,12 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class MenuScript : MonoBehaviour {
-
-	// Use this for initialization
+public class MenuScript : MonoBehaviour {	
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height /2 - 80, 200, 60), "Multiplayer"))
-        {
-            SceneManager.LoadScene("lobby");
-        }
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 80, 200, 60), "Quit"))
-        {
-            Application.Quit();
-        }
+        GameObject joinLobby = GameObject.Find("JoinLobby");
+        GameObject exit = GameObject.Find("Exit");
+        EventDelegate.Set(joinLobby.GetComponent<UIButton>().onClick, () => SceneManager.LoadScene("lobby"));
+        EventDelegate.Set(exit.GetComponent<UIButton>().onClick, () => Application.Quit());
     }
+	
 }

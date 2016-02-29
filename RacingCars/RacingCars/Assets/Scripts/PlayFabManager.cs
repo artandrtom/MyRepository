@@ -7,11 +7,10 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayFabManager : MonoBehaviour {
     public string PlayFabId;
-    private Hashtable properties;
+    public Hashtable properties;
     private List<string> numbers;
     void Start () {
         PlayFabSettings.TitleId = "AF33";
-        //PlayFabSettings.DeveloperSecretKey = "PGHRFTUNZSUKCZ38NITBGC98KXGKF65NUFITMIIYZ6FX7JKEBD";
         Login("AF33");
         properties = new Hashtable();
         numbers = new List<string>();
@@ -29,15 +28,15 @@ public class PlayFabManager : MonoBehaviour {
 
         PlayFabClientAPI.LoginWithCustomID(request, (result) => {
             PlayFabId = result.PlayFabId;
-            Debug.Log("Got PlayFabID: " + PlayFabId);
+            //Debug.Log("Got PlayFabID: " + PlayFabId);
 
             if (result.NewlyCreated)
             {
-                Debug.Log("(new account)");
+                //Debug.Log("(new account)");
             }
             else
             {
-                Debug.Log("(existing account)");
+               // Debug.Log("(existing account)");
             }
         },
         (error) => {

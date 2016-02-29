@@ -39,4 +39,5 @@ MonoBehaviour:
   - loadLevel
   - appearAll
   - finish
+  - appear
   DisableAutoOpenWizard: 1

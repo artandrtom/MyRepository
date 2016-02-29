@@ -16,13 +16,12 @@ public class CarBehaviour : Photon.MonoBehaviour {
     private Hashtable properties;
     void Start () {
         properties = new Hashtable();
-        GameObject.DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
         body = GetComponent<Rigidbody2D>();
         drag = body.drag;
         angleDrag = body.angularDrag;
         position = body.position;
-        body.MoveRotation(180);
-        myPhotonView = this.GetComponent<PhotonView>();
+        myPhotonView = GetComponent<PhotonView>();
     }
 	
 	// Update is called once per frame
@@ -31,18 +30,18 @@ public class CarBehaviour : Photon.MonoBehaviour {
         {
             return;
         }
-        fixedUpdate();
+        checkControls();
     }
-    void fixedUpdate()
+    void checkControls()
     {
-            speed = getSpeed();
         if (!controlable)
         {
             return;
         }
+        speed = getSpeed();
         if (Input.GetKey(KeyCode.W))
         {
-            move(Vector3.down, 60);
+            move(Vector3.up, 60);
             if (speed < 1)
             {
                 direction = movingDirection.FORWARD;
@@ -50,7 +49,7 @@ public class CarBehaviour : Photon.MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.S))
         {
-            move(Vector3.up, 35);
+            move(Vector3.down, 35);
             if (speed < 1)
             {
                 direction = movingDirection.BACKWARD;
@@ -58,11 +57,11 @@ public class CarBehaviour : Photon.MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.D))
         {
-            turn(speed % 30);
+            turn(speed > 30 ? 30 : speed);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            turn(-speed % 30);
+            turn(speed > 30 ? -30 : -speed);
         }
         if (Input.GetKey(KeyCode.Space))
         {

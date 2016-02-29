@@ -7,7 +7,7 @@ public class CameraBehavior : Photon.MonoBehaviour {
     void Start()
     {
         GameObject.DontDestroyOnLoad(this.gameObject);
-        car = GameObject.Find("Car(Clone)");
+        car = GameObject.Find(PhotonNetwork.player.name);
         cam = GetComponent<Camera>();
         cam.enabled = true;
         cam.orthographicSize = 7.8F;
